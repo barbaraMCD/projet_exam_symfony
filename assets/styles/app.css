@@ -1,0 +1,15 @@
+@import url("./header.css");
+@import url("./indexOeuvres.css");
+@import url("./profil.css");
+
+:root {
+    --violet: rgba(117, 117, 156, 0.874);
+    --violetClair: rgba(143, 143, 192, 0.874);
+}
+
+body {
+    background-color: rgb(248, 247, 247);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}

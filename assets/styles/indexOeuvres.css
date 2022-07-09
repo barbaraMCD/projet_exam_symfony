@@ -1,0 +1,22 @@
+.containerOeuvre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.oeuvre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 4em;
+    padding: 1em;
+    width: 90%;
+    gap: 1em;
+    margin-top: 2em;
+    background-color: var(--violet);
+    color: white;
+    border-radius: 1em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

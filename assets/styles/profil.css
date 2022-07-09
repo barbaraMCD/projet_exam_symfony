@@ -1,0 +1,21 @@
+.containerProfil {
+    display: flex;
+    height: 10em;
+    background-color: var(--violet);
+    padding: 1.5em;
+}
+
+.containerProfil > img {
+    height: 10em;
+    width: 10em;
+    border-radius: 100%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+    color: white;
+    gap: 2em;
+}

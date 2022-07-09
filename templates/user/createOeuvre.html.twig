@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+<h1 class=""> Ajoute une nouvelle oeuvre </h1>
+
+<div class="">
+    {{ form_start(form) }}
+    <div class="">
+        <label for=""> Genre </label>
+        {{dump(form.genre)}}
+        {% for genre in form.genre %}
+        <span> {{ genre.titreGenre }}</span>
+        {% endfor %}
+    </div>
+        <div class="">
+            <label for=""> Titre </label>
+            {{ form_widget(form.TitreOeuvre, {'attr': {'class':'form-control'}}) }}
+        </div>
+        <div class="">
+            <label for=""> L'oeuvre </label>
+            {{ form_widget(form.Contenu, {'attr': {'class':'form-control'}} ) }}
+        </div>
+        <div>
+            <input type="submit" class="">
+        </div>
+
+
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

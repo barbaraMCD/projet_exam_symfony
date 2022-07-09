@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+{% if user %}
+        {% include "./components/header_user.html.twig" %}
+        {% else %}
+        {% include "./components/header.html.twig"  %}
+        {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="containerOeuvre">
+    {% for oeuvre in oeuvres %}
+    <div class="oeuvre">
+        <div> Oeuvre n°{{ oeuvre.id }} </div>
+        <div> Genre : {{ oeuvre.genre.titreGenre }} </div>
+        <div> Titre : {{ oeuvre.titreOeuvre }} </div>
+        <div> {{ oeuvre.contenu }} </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

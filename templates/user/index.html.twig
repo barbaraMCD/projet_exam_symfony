@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+{% if user %}
+        {% include "./components/header_user.html.twig" %}
+        {% else %}
+        {% include "./components/header.html.twig"  %}
+        {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="containerProfil">
+        {% for profil in profils %}
+        {% if profil.user.id is same as(user.id) %}
+        <img src={{profil.photo}} alt="">
+        <div class="profil">
+                <div> {{ user.username }} </div>   
+                 <div> {{ profil.bio }} </div>
+        </div>
+        {% endif %}
+{% endfor %}
+</div>
+<div class="">
+        <a href="{{ path('oeuvre.create') }}" class=""> Ajoute une nouvelle oeuvre </a>
+    </div>
+{% for oeuvre in oeuvres %}
+        {% if oeuvre.user.id is same as(user.id) %}
+        <div class="containerOeuvre">
+                <div class="oeuvre">
+                        <div> Oeuvre n°{{ oeuvre.id }} </div>
+                        <div> Genre : {{ oeuvre.genre.titreGenre }} </div>
+                        <div> Titre : {{ oeuvre.titreOeuvre }} </div>
+                        <div> {{ oeuvre.contenu }} </div>
+                </div>
+                <a href="{{ path('oeuvre.edit', {"id" : oeuvre.id}) }}" class="">Modifier</a>
+                <form action="{{ path('oeuvre.delete', {"id" : oeuvre.id}) }}" method="POST" class="">
+                    <input type="hidden" name="_token" value=" {{ csrf_token('delete' ~ oeuvre.id) }}">
+                    <input type="submit" class="" value="Supprimer" onclick="return confirm('confirmer la suppression?')">
+                </form>
+        </div>
+        {% endif %}
+{% endfor %}
+
+{% endblock %}

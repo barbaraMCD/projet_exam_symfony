@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+{% if user %}
+        {% include "./components/header_user.html.twig" %}
+        {% else %}
+        {% include "./components/header.html.twig"  %}
+        {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="boubou">
+    <h1> Bienvenue sur le site Tous écrivain </h1>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+.header {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+    color: white;
+}
+
+.header > * {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.bouton {
+    background-color: var(--violet);
+    padding: 0.8em;
+    border-radius: 1em;
+    color: white;
+}
+
+.bouton:hover {
+    background-color: var(--violetClair);
+}
