@@ -1,7 +1,7 @@
 .containerProfil {
     display: flex;
     height: 10em;
-    background-color: var(--violet);
+    background-color: var(--orange);
     padding: 1.5em;
 }
 

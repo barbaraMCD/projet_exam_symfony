@@ -11,15 +11,37 @@
 .header > * {
     color: rgb(0, 0, 0);
     text-decoration: none;
+    font-family: 'Allura', cursive;
 }
 
 .bouton {
-    background-color: var(--violet);
     padding: 0.8em;
-    border-radius: 1em;
-    color: white;
+    font-size: x-large;
+    height: 1rem;
 }
 
+.bouton > img {
+    height: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+
 .bouton:hover {
-    background-color: var(--violetClair);
+    border-bottom: grey 0.1rem solid;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: xx-large;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.logo {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
 }

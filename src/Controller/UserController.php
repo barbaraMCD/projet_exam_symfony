@@ -2,10 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Genre;
 use App\Entity\Oeuvre;
 use App\Form\OeuvreType;
-use App\Repository\GenreRepository;
 use App\Repository\OeuvreRepository;
 use App\Repository\ProfilRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -39,6 +37,7 @@ class UserController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
+            $oeuvre->setUser($this->getUser());
             $oeuvreRepository->add($oeuvre);
             $this->addFlash('success', "Votre oeuvre a été ajouté avec succès.");
             return $this->redirectToRoute('profil');

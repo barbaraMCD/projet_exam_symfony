@@ -1,9 +1,13 @@
 <div class="header">
-    <a class="bouton" href="/">
-        <img src="" alt="">
-        <span> Marque </span>
+    <a class="brand" href="/">
+        <img src="{{ asset('images/logo.png') }}" class="logo" alt="logo">
+        <span> Tous Ecrivain </span>
     </a>
     <a class="bouton" href="/api/oeuvres"> Oeuvres </a>
-    <a class="bouton" href="/api/register"> S'inscrire </a>
-    <a class="bouton" href="/api/login" > Se connecter </a>
+        <a class="bouton" href="/api/register"> 
+            <img src="{{ asset('images/user2.png') }}" class="user" alt="inscription"> 
+        </a>
+        <a class="bouton" href="/api/login" > 
+            <img src="{{ asset('images/user.png') }}" alt="connexion"> 
+        </a>
 </div>
